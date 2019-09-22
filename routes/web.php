@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', 'MainController@showSpendings')->name('showSpendings');
+
+Route::post('ajaxDate','MainController@ajaxTime')->name('ajaxTime');
+
+Route::post('ajaxAdd','MainController@ajaxAdd')->name('ajaxAdding');
+
+Route::post('ajaxCat','MainController@ajaxCategory')->name('ajaxCateg');
